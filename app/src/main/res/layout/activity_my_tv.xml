@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Channels.MyTv">
+
+
+    <com.jarvanmo.exoplayerview.ui.ExoVideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        app:controller_display_mode="all"
+        app:resize_mode="fill"
+        app:default_artwork="@drawable/video_player"
+        app:use_artwork="true" />
+
+    <ScrollView
+        android:layout_below="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <Button
+                    android:id="@+id/mode_fit"
+                    android:text="Mode Fit"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="7dp"
+                    android:textSize="10sp"
+                    android:background="@drawable/button"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp"
+                    android:textAllCaps="false"
+
+                    />
+
+
+                <Button
+                    android:id="@+id/mode_none"
+                    android:text="Mode Fill"
+                    android:layout_toRightOf="@+id/mode_fit"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button"
+                    android:textAllCaps="false"
+                    />
+
+                <Button
+                    android:id="@+id/mode_zoom"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@id/mode_none"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button"
+                    android:textAllCaps="false"
+                    android:text="Mode Zoom"
+                    />
+
+                <Button
+                    android:id="@+id/changeMode"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/mode_zoom"
+                    android:layout_marginLeft="7dp"
+                    android:textSize="10sp"
+                    android:background="@drawable/button"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textAllCaps="false"
+                    android:text="Play"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_below="@id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

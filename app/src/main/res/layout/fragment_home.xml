@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:background="@color/main_color"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="NetBd"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/live_sports"
+    android:layout_below="@id/tool"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/sports"/>
+    <ImageView
+        android:id="@+id/live_player"
+        android:layout_centerInParent="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/video_player"/>
+        <TextView
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="LIVE"/>
+</RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/live_sports_text"
+        android:layout_below="@+id/live_sports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:text="Bangladesh games and all kinds of important matches will be shown here"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_below="@id/live_sports_text"
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/tv_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:textSize="16dp"
+                android:text="TV Channels"
+                android:textAllCaps="false"
+                android:textColor="#292525" />
+
+            <TextView
+                android:id="@+id/viewAll_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/channel_i"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/chanal_i"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/channel_i"
+                    android:id="@+id/channel24"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/channel24"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/channel24"
+                    android:id="@+id/channel_9"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/channel9"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/channel_9"
+                    android:id="@+id/independent"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/independent"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/independent"
+                    android:id="@+id/dbc"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/dbc"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/dbc"
+                    android:id="@+id/atn"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/atn"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/atn"
+                    android:id="@+id/btv"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/btv"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/btv"
+                    android:id="@+id/boishakhi"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/boishakhi"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/boishakhi"
+                    android:id="@+id/jomuna"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/jamuna1"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/jomuna"
+                    android:id="@+id/somoy"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/somoy"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/somoy"
+                    android:id="@+id/news24"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/news24"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/news24"
+                    android:id="@+id/aljajira"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/aljajira"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/aljajira"
+                    android:id="@+id/foxlife"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/foxlife"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/foxlife"
+                    android:id="@+id/bbc"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/bbc"/>
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/bbc"
+                    android:id="@+id/bijoytv"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/bijoytv"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/bijoytv"
+                    android:id="@+id/satv"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/satv"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/satv"
+                    android:id="@+id/mytv"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/mytv"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/mytv"
+                    android:id="@+id/mohona"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/mohona"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/mohona"
+                    android:id="@+id/atnislamic"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/atnislamic"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/atnislamic"
+                    android:id="@+id/songsodtv"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/songsodtv"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/songsodtv"
+                    android:id="@+id/colorsbangla"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/colorsbangla"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/colorsbangla"
+                    android:id="@+id/asintv"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/asintv"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/asintv"
+                    android:id="@+id/banglavision"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/banglavision"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/banglavision"
+                    android:id="@+id/rtvmusic"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/rtvmusic"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@+id/rtvmusic"
+                    android:id="@+id/mokka"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/mokka"/>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+
+
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+
+
+
+    <!-- END TV  -->
+
+
+
+
+
+    <LinearLayout
+        android:layout_below="@id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/radio_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/paper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginStart="10dp"
+                android:text="News Paper"
+                android:textAllCaps="false"
+                android:textColor="#292525" />
+            <TextView
+                android:id="@+id/viewAll_newsPaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"/>
+        </RelativeLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/amadersomoy"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/amadersomoy"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/amadersomoy"
+                    android:id="@+id/kalerkantho"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/kalerkantho"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/kalerkantho"
+                    android:id="@+id/ittefaq"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ittefak"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/ittefaq"
+                    android:id="@+id/somokal"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/somokal"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/somokal"
+                    android:id="@+id/noyadigonto"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/noyadigonto"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/noyadigonto"
+                    android:id="@+id/jugantor"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/jugantor"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/jugantor"
+                    android:id="@+id/jonokhonto"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/jnokhonto"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/jonokhonto"
+                    android:id="@+id/thedailystar"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/thedailystar"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/thedailystar"
+                    android:id="@+id/manobkhontho"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/manobkhontho"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/manobkhontho"
+                    android:id="@+id/deshrupantor"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/deshrupantor"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/deshrupantor"
+                    android:id="@+id/vorercagog"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/vorercagag1"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_toRightOf="@id/vorercagog"
+                    android:id="@+id/sangram"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/sangram"/>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

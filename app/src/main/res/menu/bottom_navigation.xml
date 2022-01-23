@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/home"
+        />
+    <item
+        android:title="TV Channels"
+        android:id="@+id/tv"
+        android:icon="@drawable/ic_baseline_live_tv_24"/>
+    <!--
+    <item
+        android:title="Radio"
+        android:icon="@drawable/ic_baseline_radio_24"
+        android:id="@+id/radio"/>
+-->
+
+    <item
+        android:title="News Paper"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:id="@+id/newsPaper"/>
+
+
+</menu>

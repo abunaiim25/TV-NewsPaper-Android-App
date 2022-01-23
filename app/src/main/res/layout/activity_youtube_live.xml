@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Youtube.YoutubeLive">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:videoId="4sTVgKbwVdo"
+        app:autoPlay="true"
+        app:showYouTubeButton="false"
+        app:showFullScreenButton="true" />
+    <!-- JpTgDYxB33A  -->
+
+
+    <TextView
+        android:layout_below="@id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        android:text="Shown here when the game starts"/>
+
+</RelativeLayout>
